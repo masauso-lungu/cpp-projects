@@ -1,0 +1,45 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	
+[user]
+	name = mlungu
+	email = mlungu@redhat.com
+
+[core]
+	editor = code --wait
+	excludesFile = /home/mlungu/.gitignore
+	autocrlf = input
+
+[color]
+	ui = auto
+	status = auto
+	diff = auto 
+	branch = auto
+	sh = auto
+	interactive = auto
+	pager = true
+
+
+[format]
+    pretty = oneline
+	wh
+
+[branch]
+    autosetuprebase = always
+
+[push]
+    default = simple
+
+[diff]
+    tool = vimdiff
+
+[cola]
+	spellcheck = false
+[alias]
+	commend = commit --amend --no-edit
+	
+[checkout]
+	defaultRemote = origin
